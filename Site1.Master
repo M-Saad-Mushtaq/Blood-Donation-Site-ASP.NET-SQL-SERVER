@@ -1,0 +1,165 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site1.master.cs" Inherits="Blood.Site1" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+    <title></title>
+
+    <%-- bootstrap css --%>
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+    <%-- Datatables css --%>
+    <link href="Datatables/css/dataTables.dataTables.min.css" rel="stylesheet" />
+    <%-- fontawesome css --%>
+    <link href="fontawesome/css/all.css" rel="stylesheet" />
+    <%-- Custom css --%>
+    <link href="Custom%20CSS/StyleSheet1.css" rel="stylesheet"  runat ="server"/>
+
+    <%-- bootstrap js --%>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="bootstrap/js/jquery-3.3.1.slim.min.js"></script>
+    <script src="bootstrap/js/popper.min.js"></script>
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <%-- footer css --%>
+    <style>
+        .footer1 {
+    background-color: #f8f9fa; 
+    text-align: center;
+    padding: 20px;
+    border-top: 4px solid #c9302c; 
+}
+
+    .footer1 a {
+        color: #333; 
+        text-decoration: none;
+        margin: 0 10px; 
+    }
+
+        .footer1 a:hover {
+            color: #808080; 
+        }
+
+
+.btn:hover {
+    color: #808080; 
+    border-bottom: 2px solid black;
+}
+
+
+    </style>
+
+
+</head>
+   
+<body>
+    <form id="form1" runat="server">
+        <div>
+            <nav class ="navbar navbar-expand-lg navbar-light">
+                <a class ="navbar-brand" id="n1" href ="Home.aspx">
+                     <img id="n2" src="Images/blood.jpg"  width ="30" height ="20"/>
+                        BloodRush
+                 </a>
+
+                <%-- Minimize Function --%>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                 </button>
+
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+                    <ul class="navbar-nav mr-auto">
+                        <li class ="nav-item active">
+                            <a class="nav-link btn" href="Home.aspx"> Home </a>
+                        </li>
+
+                        <li class ="nav-item active">
+                            <asp:LinkButton Class ="nav-link btn" ID="LinkButton5" runat ="server" OnClick="LinkButton5_Click">Staff</asp:LinkButton>
+                        </li>
+
+                        <li class ="nav-item active">
+                            <asp:LinkButton Class ="nav-link btn" ID="LinkButton6" runat ="server" OnClick="LinkButton6_Click" Visible="False">Patient Entry</asp:LinkButton>
+                        </li>
+
+                        <li class ="nav-item active">
+                            <asp:LinkButton Class ="nav-link btn" ID="LinkButton7" runat ="server" OnClick="LinkButton7_Click">Admin</asp:LinkButton>
+                        </li>
+
+                        <li class ="nav-item active">
+                            <asp:LinkButton Class ="nav-link btn" ID="LinkButton8" runat ="server" OnClick="LinkButton8_Click">Staff Entry</asp:LinkButton>
+                        </li>
+
+                        <li class ="nav-item active"> 
+                            <asp:LinkButton Class ="nav-link btn" ID="LinkButton9" runat ="server" OnClick="LinkButton9_Click">Add Center</asp:LinkButton>
+                        </li>
+
+                    </ul>
+
+                    <ul class ="navbar-nav">
+                        <li class ="nav-item active">
+                            <asp:LinkButton Class ="nav-link btn" ID="LinkButton1" runat ="server" OnClick="LinkButton1_Click">LOGIN</asp:LinkButton>
+                        </li>
+
+                        <li class ="nav-item active">
+                            <asp:LinkButton Class ="nav-link btn" ID="LinkButton2" runat ="server" OnClick="LinkButton2_Click">SIGN UP</asp:LinkButton>
+                        </li>
+
+                        <li class ="nav-item active">
+                            <asp:LinkButton Class ="nav-link btn" ID="LinkButton3" runat ="server" OnClick="LinkButton3_Click" Visible="False">SIGN OUT</asp:LinkButton>
+                        </li>
+
+                        <li class ="nav-item active">
+                            <asp:LinkButton Class ="nav-link btn" ID="LinkButton4" runat ="server" OnClick="LinkButton4_Click" Visible="False">Hello, User</asp:LinkButton>
+                        </li>
+
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+
+
+        <%-- Main Content Placeholder --%>
+        <div>
+            <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <%-- Main Content Placeholder --%>
+
+        <div class="footer1">
+           <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <h5>About Us</h5>
+                        <p>We are committed to connecting donors and recipients for a better cause.</p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Quick Links</h5>
+                        <p>
+                            <a href="Home.aspx">Home</a> |
+                            <a href="Review.aspx">Reviews</a> |
+                            <a href="signup_staff.aspx">Sign Up</a> |
+                            <a href="About.aspx">About Developers</a> 
+                        </p>
+                    </div>
+                    <div class="col-md-4">
+                        <h5>Contact Us</h5>
+                        <p><a href="mailto:info@bloodrush.com">Email: info@bloodrush.com</a></p>
+                        <p>Phone: (123) 456-7890</p>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-12 text-center">
+                        <p>&copy; 2024 BloodRush. All rights reserved.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+    </form>
+</body>
+</html>
